@@ -1,0 +1,47 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    probes:
+      enabled: true
+server:
+  port: 8081
+# Oracle settings
+spring:
+  datasource:
+    #url: '{cipher}f9a6a11d78d6d16f4513dd1fd04d0eb1391562be06520f5115e24e5845a53ed66752bdce6dc658d3726abc281101a7eddd1348e95b2916254e50531cd37d39f7a69ad9c7d5fcff560808fa448d0ecaef0709d05d8ad5f3df64152acd6f4cd1135ff5f5dcaddd67e36e5bcdbf34c3d8a5'
+    url: jdbc:oracle:thin:@infinity-test.cmiisdwbkluq.af-south-1.rds.amazonaws.com:1521/inttinf
+    username: '{cipher}2475cf3c246186b5960bac36f6abf670e5e2fe0dd6fb0cfeef01a65c5f19e1ba'
+    password: '{cipher}1ab41fc5f90fa844bbee50921ec9e89f4e8cd0acd003cec428c8aaacbedf2e5b39720bb2cb24510f2742a7d007141a4e'
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      poolName: Hikari
+      auto-commit: false
+
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    database: Oracle
+    show-sql: true
+    open-in-view: false
+    properties:
+      hibernate.default_schema: 'infinity'
+      hibernate.id.new_generator_mappings: true
+      hibernate.connection.provider_disables_autocommit: true
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+PoqCfg:
+  PaymentMethod: C
+
+vault:
+  api: 'http://hashicorpvault-infinity-dal-app-test.apps.npd.tc.ocp.vodacom.corp/v1/kv1/vod-ms-subscriptions/'
+  #token: '{cipher}${VUALT_TOKEN_DEV}'
+  token: '{cipher}4480372b34815ada17f93a00c8de81308ac21298032d240a006a31dcd7e05beb059b4da701c985998b98e1e5ff2747be'
+
+ldap:
+  api: 'ldaps://eassec.vodacom.corp:636'
+  group: 'LDAP_GROUP=ESM_Test_OS_RH_AppSup'
+
+cnj:
+  message : I am king 12222
