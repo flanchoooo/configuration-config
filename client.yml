@@ -35,7 +35,7 @@ PoqCfg:
   PaymentMethod: C
 
 vault:
-  api: 'http://hashicorpvault-infinity-dal-app-test.apps.npd.tc.ocp.vodacom.corp/v1/kv1/vod-ms-subscriptions/'
+  api: 'test'
   #token: '{cipher}${VUALT_TOKEN_DEV}'
   token: '{cipher}4480372b34815ada17f93a00c8de81308ac21298032d240a006a31dcd7e05beb059b4da701c985998b98e1e5ff2747be'
 
@@ -44,4 +44,4 @@ ldap:
   group: 'LDAP_GROUP=ESM_Test_OS_RH_AppSup'
 
 cnj:
-  message : I am king 1212222121sad111111
+  message : flencho
